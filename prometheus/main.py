@@ -45,8 +45,8 @@ def process_request():
     active_requests_count += 1
     request_counter.add(1, {"endpoint": "/example"})
 
-    response_time = random.uniform(100, 500)  # Tempo de resposta em ms
-    time.sleep(response_time / 1000)  # Converte ms para segundos
+    response_time = random.uniform(100, 500)
+    time.sleep(response_time / 1000)
     response_time_histogram.record(response_time, {"endpoint": "/example"})
 
     active_requests_count -= 1
